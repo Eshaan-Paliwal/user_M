@@ -24,11 +24,7 @@ export function Login() {
       localStorage.setItem("currentUser", JSON.stringify(response.user));
       
       toast.success("Login successful!");
-      if (response.user.role === 'admin') {
-        navigate("/dashboard");
-      } else {
-        navigate("/profile");
-      }
+      navigate("/dashboard");
     } catch (error: any) {
       console.error("Login error:", error);
       

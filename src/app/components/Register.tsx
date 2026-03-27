@@ -46,8 +46,7 @@ export function Register() {
       localStorage.setItem("authToken", response.token!);
       localStorage.setItem("currentUser", JSON.stringify(response.user));
       
-      // New users are always 'user' role by default, redirect to profile
-      navigate("/profile");
+      navigate("/dashboard");
     } catch (error: any) {
       console.error("Registration error:", error);
       console.error("Full error details:", error.message, error.stack);
